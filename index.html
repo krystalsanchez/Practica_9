@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Calificaciones</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Calificaciones</h1>
+        <form id="calificacionesForm" onsubmit="agregarCalificaciones(); return false;">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+            <label for="matricula">Matrícula:</label>
+            <input type="text" id="matricula" name="matricula" required><br><br>
+            <label for="materia1">Auditoria Informatica:</label>
+            <input type="number" id="auditoriaInformatica" name="auditoriaInformatica" min="0" max="100" required><br><br>
+            <label for="materia2">Desarrollor de aplicaciones web:</label>
+            <input type="number" id="desarrolloAplicacionesWeb" name="desarrolloAplicacionesWeb" min="0" max="100" required><br><br>
+            <label for="materia3">Fundamentos de investigacion:</label>
+            <input type="number" id="fundamentosInvestigacion" name="fundamentosInvestigacion" min="0" max="100" required><br><br>
+            <label for="materia4">Interconectividad de redes:</label>
+            <input type="number" id="interconectividadRedes" name="interconectividadRedes" min="0" max="100" required><br><br>
+            <label for="materia5">Tópicos de Bases de Datos:</label>
+            <input type="number" id="topicosBasesDatos" name="topicosBasesDatos" min="0" max="100" required><br><br>
+            <button type="submit">Enviar</button>
+        </form>
+
+        <h2>Calificaciones Registradas</h2>
+        <table id="calificacionesTable">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Matrícula</th>
+                    <th>Auditoria Informatica</th>
+                    <th>Desarrollo de aplicaciones web</th>
+                    <th>Fundamentos de investigacion</th>
+                    <th>Interconectividad de redes</th>
+                    <th>Tópicos de Bases de Datos</th>
+                    <th>Promedio General</th>
+                </tr>
+            </thead>
+            <tbody id="calificacionesBody">
+       
+            </tbody>
+        </table>
+    </div>
+
+    <script src="calificaciones.js"></script>
+</body>
+</html>
